@@ -1,4 +1,6 @@
-import "@shopify/shopify-app-remix/adapters/node";
+// import "@shopify/shopify-app-remix/adapters/node";
+import "@shopify/shopify-app-remix/adapters/vercel";
+
 import {
   AppDistribution,
   DeliveryMethod,
@@ -29,6 +31,7 @@ const shopify = shopifyApp({
   // sessionStorage: new FirebaseSessionStorage(),
 
   distribution: AppDistribution.AppStore,
+  isEmbeddedApp: false,
   restResources,
   webhooks: {
     APP_UNINSTALLED: {
