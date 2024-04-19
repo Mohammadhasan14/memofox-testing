@@ -17,7 +17,7 @@ const shopify = shopifyApp({
   apiSecretKey: process.env.SHOPIFY_API_SECRET || "",
   apiVersion: LATEST_API_VERSION,
   scopes: process.env.SCOPES?.split(","),
-  appUrl: process.env.SHOPIFY_APP_URL || "https://memofox-app.vercel.app/",
+  appUrl: process.env.SHOPIFY_APP_URL || "https://memofox-testing.vercel.app/",
   authPathPrefix: "/auth",
   sessionStorage: new MongoDBSessionStorage(
     process.env.MONGODB_URI || "mongodb+srv://admin-hasan:JQaRPzWZonnvbeI7@cluster0.xx0xp4y.mongodb.net",
