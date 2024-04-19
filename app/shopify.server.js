@@ -13,8 +13,8 @@ import dotenv from 'dotenv'
 dotenv.config()
 console.log('process.env.SHOPIFY_APP_URL',process.env.SHOPIFY_APP_URL);
 const shopify = shopifyApp({
-  apiKey: process.env.SHOPIFY_API_KEY || "9342b92fd72339c05a9b8b640b41ce2f",
-  apiSecretKey: process.env.SHOPIFY_API_SECRET || "597122ef8067ae45019a2e3dd275906a",
+  apiKey: process.env.SHOPIFY_API_KEY || "3fab481ce4a7d341622cec1b84d75272",
+  apiSecretKey: process.env.SHOPIFY_API_SECRET || "c8ae48427c430588dce659d887afcd25",
   apiVersion: LATEST_API_VERSION,
   scopes: process.env.SCOPES?.split(",") || "read_customers,write_customers,write_products".split(","),
   appUrl: process.env.SHOPIFY_APP_URL || "https://memofox-app.vercel.app/",
