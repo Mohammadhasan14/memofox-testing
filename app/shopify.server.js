@@ -11,16 +11,16 @@ import { MongoDBSessionStorage } from '@shopify/shopify-app-session-storage-mong
 import { restResources } from "@shopify/shopify-api/rest/admin/2024-01";
 import dotenv from 'dotenv'
 dotenv.config()
-console.log('process.env.SHOPIFY_APP_URL',process.env.SHOPIFY_APP_URL);
+console.log('process.env.SHOPIFY_APP_URL', process.env.SHOPIFY_APP_URL);
 const shopify = shopifyApp({
-  apiKey: process.env.SHOPIFY_API_KEY || "3fab481ce4a7d341622cec1b84d75272",
-  apiSecretKey: process.env.SHOPIFY_API_SECRET || "c8ae48427c430588dce659d887afcd25",
+  apiKey: process.env.SHOPIFY_API_KEY,
+  apiSecretKey: process.env.SHOPIFY_API_SECRET || "",
   apiVersion: LATEST_API_VERSION,
-  scopes: process.env.SCOPES?.split(",") || "read_customers,write_customers,write_products".split(","),
-  appUrl: process.env.SHOPIFY_APP_URL || "https://memofox-testing.vercel.app/",
+  scopes: process.env.SCOPES?.split(","),
+  appUrl: process.env.SHOPIFY_APP_URL || "https://memofox-app.vercel.app/",
   authPathPrefix: "/auth",
   sessionStorage: new MongoDBSessionStorage(
-    process.env.MONGODB_URI || "mongodb+srv://info:RRhxjoutw1gzehLt@cluster0.jopyw9d.mongodb.net",
+    process.env.MONGODB_URI || "mongodb+srv://admin-hasan:JQaRPzWZonnvbeI7@cluster0.xx0xp4y.mongodb.net",
     'memofox-app',),
   // sessionStorage: new MongoDBSessionStorage(
   //   process.env.MONGODB_URI || 'mongodb://localhost:27017',

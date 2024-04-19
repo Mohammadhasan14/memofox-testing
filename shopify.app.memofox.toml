@@ -1,28 +1,33 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "9342b92fd72339c05a9b8b640b41ce2f"
-name = "Memofox"
-handle = "memofox-1"
-application_url = "https://fo-scheduling-pavilion-curriculum.trycloudflare.com"
+client_id = "3fab481ce4a7d341622cec1b84d75272"
+name = "memofox"
+handle = "memofox-4"
+application_url = "https://manuals-ring-houston-autumn.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "memofox.myshopify.com"
+dev_store_url = "aeon-development.myshopify.com"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "read_customers,write_customers,write_products"
 
 [auth]
 redirect_urls = [
-  "https://fo-scheduling-pavilion-curriculum.trycloudflare.com/auth/callback",
-  "https://fo-scheduling-pavilion-curriculum.trycloudflare.com/auth/shopify/callback",
-  "https://fo-scheduling-pavilion-curriculum.trycloudflare.com/api/auth/callback"
+  "https://manuals-ring-houston-autumn.trycloudflare.com/auth/callback",
+  "https://manuals-ring-houston-autumn.trycloudflare.com/auth/shopify/callback",
+  "https://manuals-ring-houston-autumn.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
-api_version = "2024-01"
+api_version = "2024-04"
+
+[app_proxy]
+url = "https://manuals-ring-houston-autumn.trycloudflare.com"
+subpath = "getmsg"
+prefix = "apps"
 
 [pos]
 embedded = false
