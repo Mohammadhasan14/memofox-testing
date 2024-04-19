@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "f42685ff807bbeb5b09a5eba666dbfd0"
+name = "Memofox"
+handle = "memofox"
+application_url = "https://bikini-configuring-chess-committed.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "rocco-scavetta.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,write_customers,write_products"
+
+[auth]
+redirect_urls = [
+  "https://bikini-configuring-chess-committed.trycloudflare.com/auth/callback",
+  "https://bikini-configuring-chess-committed.trycloudflare.com/auth/shopify/callback",
+  "https://bikini-configuring-chess-committed.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false

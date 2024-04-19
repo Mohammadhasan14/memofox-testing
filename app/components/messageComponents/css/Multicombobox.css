@@ -1,0 +1,18 @@
+.selectInstructionParent {
+    margin: 7px auto;
+    display: flex;
+    justify-content: end;
+}
+
+.selectInstructionParent>p {
+    font-size: 12px;
+    color: grey;
+}
+
+.spaceAboveTags {
+    margin: 14px auto;
+}
+
+.AmPmEle {
+    margin-top: 16px;
+}

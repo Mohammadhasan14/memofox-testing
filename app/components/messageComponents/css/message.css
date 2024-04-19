@@ -1,0 +1,126 @@
+/* Animated background during transition */
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+.tab-list {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-row: 1 / 2;
+    max-width: 25rem;
+}
+
+.tab {
+    /* Resetting default button appearance */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+
+    /* Customize text */
+    color: inherit;
+    font-size: inherit;
+
+    /* Customize size */
+    padding: 0 1rem;
+    height: 3rem;
+
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Tab background color, expands on hover */
+.tab::before {
+    content: '';
+
+    /* Fills the whole tab */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color);
+    z-index: -1;
+    transition: transform .12s ease-out;
+}
+
+.tab:hover::before {
+    transform: scale(1.2);
+}
+
+.tab.on {
+    cursor: auto;
+    pointer-events: none;
+    font-weight: 700;
+}
+
+.tab:focus:hover {
+    outline: none;
+}
+
+/* Tab text underline */
+.tab::after {
+    content: '';
+    display: block;
+    background-color: rgb(235, 50, 35);
+
+    /* Size and position */
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: .5rem;
+    left: 0;
+    z-index: 3;
+
+    /* Ready to animate on tab activation */
+    transform-origin: top left;
+    transform: scaleX(0);
+    transition: transform .2s ease-out;
+}
+
+/* Display the underline on active tab */
+.tab.on::after {
+    transform: scaleX(1);
+}
+
+/* Change side of underline origin */
+.tab.fromright::after {
+    transform-origin: top right;
+}
+
+
+
+/* Hide sections by default */
+/* section {
+    display: none;
+} */
+
+/* Display section corresponding to active tab */
+/* section.on {
+    display: block;
+} */
+
+/* for divider below button */
+
+/* .divider-top::after {
+    content: "";
+    border-bottom: 2px solid #EBEBEB;
+    width: 100%;
+    position: absolute;
+    bottom: 24px;
+}
+
+.divider-top {
+    position: relative;
+} */
